@@ -9,3 +9,15 @@ o88'   888o `Y8bod8P' o888bood8P'   `8bd88P'   d888b     888bod8P' o888o o888o o
                                                         o888o                                  
 =====================================================================================================
 
+# HackTheBox: Editor
+**Difficulty:** Easy  
+**IP Address:** `10.10.11.xxx`
+
+---
+
+## 🚩 Initial Reconnaissance
+### Nmap Scan Results
+```text
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.2p1
+80/tcp open  http    Apache 2.4.41
