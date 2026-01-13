@@ -1,0 +1,25 @@
+from Crypto.Util.number import long_to_bytes, inverse
+
+# Given values
+p = 2
+N = 24012184291172563461819768219454070718692945800247078406342836463513980443425005333374023462823653939324724111907769339181458430309142340218918882834314622
+e = 65537
+c = 16233978643250578110848506960389426293208964251050462711448289231731105596050067580665901780231215540782477546920483820048261023331992741886073337241198359
+
+# Compute q
+q = N // p
+
+# Compute phi(N)
+phi = (p - 1) * (q - 1)
+
+# Compute private exponent d
+d = inverse(e, phi)
+
+# Decrypt ciphertext
+m = pow(c, d, N)
+
+# Convert to bytes
+plaintext = long_to_bytes(m)
+
+print("Decrypted integer:", m)
+print("Decrypted message (bytes):", plaintext)
